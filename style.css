@@ -1,0 +1,30 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-auto-rows: 1fr;
+    height: 100vh;
+}
+
+.sidebar{
+    background-color: #84CC16;
+    grid-row: 1 / 4;
+    color: #F7FEE7;
+
+}
+
+.header{
+    background-color: #D9F99D;
+
+}
