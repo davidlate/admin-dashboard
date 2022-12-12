@@ -57,6 +57,7 @@ li img{
     color: #F7FEE7;
     padding-left: 10px;
     padding-right: 12px;
+    min-height: 100vh;
 }
 
 .sidebar .title{
@@ -70,9 +71,8 @@ li img{
 .container{
     display: grid;
     grid-template-columns: 225px 5fr;
-    grid-template-rows: 2fr 8fr;
-    grid-auto-rows: 1fr;
-    height: 100vh;
+    grid-template-rows: min-content min-content;
+    min-height: 100vh;
 }
 
 
@@ -81,21 +81,83 @@ li img{
 .header{
     background-color: #D9F99D;
     height: min-content;
-    padding-bottom: 20px;;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: grid;
+    max-width: 100vw;
 }
 
 
-.image{
-    background: transparent;
+.toprow{
+    display: grid;
+    grid-auto-flow: column;
+    width: 100%;
+    height: 3rem;
+    align-items: center;
+}
+
+
+.toprow a{
+    place-self: center;
+}
+.toprow img{
+    height: 2rem;
+    width: 2rem;
+    object-fit: cover;
     border-radius: 50%;
 }
 
+.toprow input{
+    border-radius: 10px;
+    height: 1.5rem;
+    align-self: center;
+}
 
-button.function{
+.lowrow{
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-rows: 1fr 1fr;
+    column-gap: 0px;
+}
+
+.lowrow *{
+    grid-row: 1/-1;
+}
+
+.lowrow p{
+    grid-row: 1;
+}
+
+.lowrow h3{
+    grid-row: 2;
+}
+
+.lowrow button{
+    height: min-content;
+    place-self: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: min-content;
+}
+
+.lowrow a{
+    place-self: center;
+}
+
+.lowrow a img{
+    border-radius: 50%;
+    height: 3rem;
+    width: 3rem;
+    object-fit: cover;
+}
+
+
+.lowrow .function{
     background-color: #A3E635;
     border-radius: 15px;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
     padding-top: 5px;
     padding-bottom: 5px;
 }
@@ -103,6 +165,7 @@ button.function{
 .content{
     display: grid;
     grid-template-columns: 3fr 1.25fr;
+    min-height: calc(100vh - 7rem );
 }
 
 
