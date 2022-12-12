@@ -6,39 +6,160 @@
 *{
     margin: 0px;
     padding: 0px;
+    /* border: 1px solid black; */
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
 }
 
-.container{
-    display: grid;
-    grid-template-columns: 1fr 5fr;
-    grid-template-rows: 2fr 8fr;
-    grid-auto-rows: 1fr;
-    height: 100vh;
+
+h3{
+    font-style:normal;
+    font-weight:00;
+    font-size: 1rem;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+img{
+    max-height: 50px;
+    max-width: 50px;
+
+}
+
+ul{
+    align-content: center;
+}
+
+
+li{
+    display: flex;
+    align-items: center;
+    margin-top: 7px;
+
+
+}
+
+
+li img{
+    width: 1.75rem;
+    height: 1.75rem;
+    align-self: center;
+    margin-right: 13px;
+
 }
 
 .sidebar{
     background-color: #84CC16;
     grid-row: 1 / 4;
     color: #F7FEE7;
-
+    padding-left: 10px;
+    padding-right: 12px;
 }
+
+.sidebar .title{
+    font-size: 1.5rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 225px 5fr;
+    grid-template-rows: 2fr 8fr;
+    grid-auto-rows: 1fr;
+    height: 100vh;
+}
+
+
+
 
 .header{
     background-color: #D9F99D;
+    height: min-content;
+    padding-bottom: 20px;;
 }
 
+
+.image{
+    background: transparent;
+    border-radius: 50%;
+}
+
+
+button.function{
+    background-color: #A3E635;
+    border-radius: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
 
 .content{
     display: grid;
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: 3fr 1.25fr;
 }
-
 
 
 .projects{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    padding-left: 20px;
+    padding-right: 10px;
+    padding-top: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-rows: min-content 1fr 1fr;
+    row-gap: 10px;
+    column-gap: 30px;
+    grid-auto-rows: 1fr;
+}
+
+.projects>h3{
+    grid-column: 1 / -1;
+
+}
+
+
+.card{
+    box-shadow: 3px 3px 5px grey, -1px -1px 1px rgb(219, 219, 219);
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+
+.announcements{
+    gap: 20px;
+    padding: 20px;
+    display: grid;
+    row-gap: 10px;
+    max-width: 300px;
+
+}
+.announcement-container{
+    display: grid;
+    box-shadow: 3px 3px 5px grey, -1px -1px 1px rgb(219, 219, 219);
+    border-radius: 10px;
+    padding: 1rem;
+    row-gap: 15px;
+}
+
+.trending{
+    gap: 20px;
+    display: grid;
+    padding: 1rem;
+    row-gap: 10px;
+    max-width: 300px;
+}
+
+.trending-container{
+    box-shadow: 3px 3px 5px grey, -1px -1px 1px rgb(219, 219, 219);
+    border-radius: 10px;
+    padding: 1rem;
+    display: grid;
+    row-gap: 15px;
 }
 
